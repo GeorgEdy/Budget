@@ -36,18 +36,18 @@ var spendingStore = (function () {
             return data;
         },
         addExpense: function (item) {
-            item.id = data[0].expensesLastId++;
+            item.id = data[0].expensesLastId ++;
             data[0].expenses.push(item);
             return data;
         },
         addRecuringExpense: function (item) {
-            item.id = data[0].recuringExpensesLastId++;
+            item.id = data[0].recuringExpensesLastId ++;
             data[0].recuringExpenses.push(item);
             return data;
         },
         updateExpense: function (id, updateData) {
             $.each(data[0].expenses, function (index) {
-                if (this.id == id) {
+                if(this.id == id){
                     data[0].expenses[index] = updateData;
                 }
             });
@@ -55,7 +55,7 @@ var spendingStore = (function () {
         },
         updateRecuringExpense: function (id, updateData) {
             $.each(data[0].recuringExpenses, function (index) {
-                if (this.id == id) {
+                if(this.id == id){
                     data[0].recuringExpenses[index] = updateData;
                 }
             });
@@ -63,7 +63,7 @@ var spendingStore = (function () {
         },
         deleteExpense: function (id) {
             $.each(data[0].expenses, function (index) {
-                if (index == id) {
+                if(index == id){
                     data[0].expenses.splice(index, 1);
                 }
             });
@@ -71,11 +71,11 @@ var spendingStore = (function () {
         },
         deleteRecuringExpense: function (id) {
             $.each(data[0].recuringExpenses, function (index) {
-                if (index == id) {
+                if(index == id){
                     data[0].recuringExpenses.splice(index, 1);
                 }
             });
             return data;
         }
     };
-}) ();
+})();

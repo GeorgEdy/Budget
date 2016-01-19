@@ -1,7 +1,7 @@
 var budgetStore = (function () {
 
     var data = [{
-        budget: 1000,
+        budget: 0,
         extraBudgetLastId: 3,
         extraBudget: [
             {
@@ -19,7 +19,7 @@ var budgetStore = (function () {
 
     return {
         getAllBudget: function () {
-            return data[0];
+            return data;
         },
         addBudget: function (item) {
             data[0].budget = item;
@@ -36,9 +36,9 @@ var budgetStore = (function () {
         },
         updateExtraBudget: function (id, updateData) {
             $.each(data[0].extraBudget, function (index) {
-                if (this.id == id) {
-                    data[0].extraBudget[index] = updateData;
-                }
+               if(this.id == id){
+                   data[0].extraBudget[index] = updateData;
+               }
             });
             return data;
         },
@@ -48,7 +48,7 @@ var budgetStore = (function () {
         },
         deleteExtraBudget: function (id) {
             $.each(data[0].extraBudget, function (index) {
-                if (index == id) {
+                if(index == id){
                     data[0].extraBudget.splice(index, 1);
                 }
             });
@@ -56,3 +56,27 @@ var budgetStore = (function () {
         }
     };
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

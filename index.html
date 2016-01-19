@@ -2,11 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Budget App</title>
+    <title>Budget</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="js/budgetStore.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<header><h1>Budgeting app</h1>
+</header>
+<form class="form-inline" id="my-form">
+    <div class="form-group">
+        <label>Name
+            <input type="text" id="name">
+        </label>
+    </div>
+    <div class="form-group">
+        <label>Amount
+            <input type="number" id="amount">
+        </label>
+    </div>
+    <label>
+        <select class="form-control">
+            <option value="food">Food</option>
+            <option value="clothing">Clothing</option>
+            <option value="health">Health</option>
+        </select>
+    </label>
+    <div class="form-group">
+        <label>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </label>
+    </div>
+</form>
+<script src="js/jquery-2.2.0.min.js"></script>
+<script src="js/services/addExpense.js"></script>
+<script src="js/resig.js"></script>
+<script src="js/stores/budgetStore.js"></script>
+<script src="js/stores/categoriesStore.js"></script>
+<script src="js/stores/spendingStore.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

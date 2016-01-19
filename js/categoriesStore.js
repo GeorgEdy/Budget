@@ -1,4 +1,4 @@
-var categories = (function () {
+var categoriesStore = (function () {
         var lastId = 3;
         var categoryData = [
             {

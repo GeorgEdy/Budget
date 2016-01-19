@@ -35,6 +35,15 @@ var spendingStore = (function () {
         getAllExpenses: function () {
             return data;
         },
+        getExpense: function (id) {
+            var obj = "";
+            $.each(data[0].expenses, function (index) {
+                if(index == id){
+                    obj = data[0].expenses[id];
+                }
+            });
+            return obj;
+        },
         addExpense: function (item) {
             item.id = data[0].expensesLastId ++;
             data[0].expenses.push(item);

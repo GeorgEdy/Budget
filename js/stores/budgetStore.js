@@ -21,6 +21,15 @@ var budgetStore = (function () {
         getAllBudget: function () {
             return data;
         },
+        getExtraBudget: function (id) {
+            var obj = "";
+            $.each(data[0].extraBudget, function (index) {
+                if(index == id){
+                    obj = data[0].extraBudget[id];
+                }
+            });
+            return obj;
+        },
         addBudget: function (item) {
             data[0].budget = item;
             return data;

@@ -1,6 +1,6 @@
 var categoriesStore = (function () {
         var lastId = 3;
-        var categoryData = [
+        var data = [
             {
                 id: 0,
                 name: 'Food',
@@ -19,22 +19,31 @@ var categoriesStore = (function () {
         ];
 
         return {
-            getCategories: function () {
-                return categoryData;
+            getAllCategories: function () {
+                return data;
+            },
+            getCategory: function (id) {
+                var obj = "";
+                $.each(data, function (index) {
+                    if(index == id){
+                        obj = data[id];
+                    }
+                });
+                return obj;
             },
             addCategory: function (item) {
                 item.id = lastId++;
-                categoryData.push(item);
-                return categoryData;
+                data.push(item);
+                return data;
             },
             updateCategory: function (id, editedData) {
                 if(editedData.id == id) {
-                    categoryData[id] = editedData;
-                    return categoryData;
+                    data[id] = editedData;
+                    return data;
                 };
             },
             deleteCategory: function (id) {
-                categoryData.splice(id, 1);
+                data.splice(id, 1);
             }
         };
     }

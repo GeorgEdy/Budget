@@ -36,9 +36,9 @@ var budgetStore = (function () {
         },
         updateExtraBudget: function (id, updateData) {
             $.each(data[0].extraBudget, function (index) {
-               if(this.id == id){
-                   data[0].extraBudget[index] = updateData;
-               }
+                if (this.id == id) {
+                    data[0].extraBudget[index] = updateData;
+                }
             });
             return data;
         },
@@ -48,7 +48,7 @@ var budgetStore = (function () {
         },
         deleteExtraBudget: function (id) {
             $.each(data[0].extraBudget, function (index) {
-                if(index == id){
+                if (index == id) {
                     data[0].extraBudget.splice(index, 1);
                 }
             });
@@ -56,27 +56,3 @@ var budgetStore = (function () {
         }
     };
 })();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

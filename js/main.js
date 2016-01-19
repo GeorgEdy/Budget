@@ -1,3 +1,3 @@
-/**
- * Created by eduar on 19/01/16.
- */
+$(function () {
+    $('#my-form').submit(addExpense);
+});

@@ -1,4 +1,5 @@
-var categories = (function () {
+var categoriesStore = (function () {
+        var lastId = 3;
         var categoryData = [
             {
                 id: 0,
@@ -22,10 +23,11 @@ var categories = (function () {
                 return categoryData;
             },
             addCategory: function (item) {
+                item.id = lastId++;
                 categoryData.push(item);
                 return categoryData;
             },
-            editCategory: function (id, editedData) {
+            updateCategory: function (id, editedData) {
                 if(editedData.id == id) {
                     categoryData[id] = editedData;
                     return categoryData;

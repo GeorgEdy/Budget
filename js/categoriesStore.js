@@ -27,7 +27,7 @@ var categoriesStore = (function () {
                 categoryData.push(item);
                 return categoryData;
             },
-            editCategory: function (id, editedData) {
+            updateCategory: function (id, editedData) {
                 if(editedData.id == id) {
                     categoryData[id] = editedData;
                     return categoryData;

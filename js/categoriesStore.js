@@ -1,4 +1,5 @@
 var categories = (function () {
+        var lastId = 3;
         var categoryData = [
             {
                 id: 0,
@@ -22,6 +23,7 @@ var categories = (function () {
                 return categoryData;
             },
             addCategory: function (item) {
+                item.id = lastId++;
                 categoryData.push(item);
                 return categoryData;
             },

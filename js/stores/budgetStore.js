@@ -1,7 +1,7 @@
 var budgetStore = (function () {
 
     var data = [{
-        budget: 0,
+        budget: 600,
         extraBudgetLastId: 3,
         extraBudget: [
             {
